@@ -7,6 +7,7 @@ import { useScrollSpy } from './hooks/useScrollSpy.js';
 import { useLanguage } from './context/LanguageContext.jsx';
 import { projects } from './data/projects.js';
 import { experiences } from './data/experiences.js';
+import Contact from './components/Contact.jsx';
 
 const SECTION_IDS = SECTIONS.map((s) => s.id);
 
@@ -70,9 +71,7 @@ export default function App() {
           </ul>
         </Section>
 
-        <Section id="contato" label={t.contact.label} title={t.contact.title}>
-          <p className="muted">Formulário e ícones coloco depois</p>
-        </Section>
+        <Contact />
       </main>
 
       <Footer />

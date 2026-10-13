@@ -1,42 +1,71 @@
-// Todos os textos do site em PT e EN. Para adicionar um texto novo, crie a chave nos dois idiomas.
 export const translations = {
   pt: {
-    nav: { about: 'Sobre mim', projects: 'Projetos', experiences: 'Experiências', contact: 'Contato' },
-    hero: {
+  nav: { about: 'Sobre mim', projects: 'Projetos', experiences: 'Experiências', contact: 'Contato' },
+  hero: {
       role: 'Engenharia de Software',
       tagline: 'Transformo curiosidade em código e ideias em experiências digitais que aproximam pessoas.',
       seeProjects: 'Ver projetos',
       downloadCv: 'Baixar currículo',
     },
-    about: {
+  about: {
       label: 'Sobre mim',
       title: 'Tecnologia com raízes humanas.',
       // PREENCHER: formação, área de atuação, interesses e objetivos profissionais
       text: 'Texto de apresentação em português (formação, área de atuação, interesses e objetivos).',
     },
-    projects: { label: 'Projetos', title: 'Uma constelação de ideias.', github: 'Ver no GitHub' },
+  projects: { label: 'Projetos', title: 'Uma constelação de ideias.', github: 'Ver no GitHub' },
     experiences: { label: 'Experiências', title: 'Trajetória em órbita.' },
-    contact: { label: 'Contato', title: 'Vamos enviar um sinal?' },
-    footer: { rights: 'Projetado com curiosidade e proporção áurea.' },
+  contact: {
+    label: 'Contato',
+    title: 'Vamos enviar um sinal?',
+    intro: 'Tem uma ideia, oportunidade ou só quer trocar referências? Minha frequência está aberta.',
+    name: 'Seu nome', namePh: 'Como posso te chamar?',
+    email: 'Seu e-mail', emailPh: 'voce@email.com',
+    message: 'Sua mensagem', messagePh: 'Conte sobre sua ideia, projeto ou oportunidade...',
+    send: 'Enviar sinal', sending: 'Enviando...',
+  errors: {
+    name: 'Informe seu nome (mínimo 2 letras).',
+    email: 'Informe um e-mail válido, como voce@email.com.',
+    message: 'Escreva ao menos 10 caracteres.',
+  },
+  success: 'Sinal recebido! Obrigada pelo contato, respondo em breve.',
+  failure: 'Não foi possível enviar agora. Tente de novo ou use um dos contatos ao lado.',
+},
+  footer: { rights: 'Projetado com curiosidade e proporção áurea.' },
     a11y: { toggleTheme: 'Alternar tema claro/escuro', openMenu: 'Abrir menu', language: 'Idioma' },
   },
   en: {
-    nav: { about: 'About', projects: 'Projects', experiences: 'Experience', contact: 'Contact' },
-    hero: {
+  nav: { about: 'About', projects: 'Projects', experiences: 'Experience', contact: 'Contact' },
+  hero: {
       role: 'Software Engineering',
       tagline: 'I turn curiosity into code and ideas into digital experiences that bring people closer.',
       seeProjects: 'View projects',
       downloadCv: 'Download résumé',
     },
-    about: {
+  about: {
       label: 'About me',
       title: 'Technology with human roots.',
       text: 'Introduction text in English (education, field, interests and career goals).',
     },
-    projects: { label: 'Projects', title: 'A constellation of ideas.', github: 'View on GitHub' },
-    experiences: { label: 'Experience', title: 'A path in orbit.' },
-    contact: { label: 'Contact', title: "Let's send a signal?" },
-    footer: { rights: 'Designed with curiosity and the golden ratio.' },
-    a11y: { toggleTheme: 'Toggle light/dark theme', openMenu: 'Open menu', language: 'Language' },
+  projects: { label: 'Projects', title: 'A constellation of ideas.', github: 'View on GitHub' },
+  experiences: { label: 'Experience', title: 'A path in orbit.' },
+  contact: {
+    label: 'Contact',
+    title: "Let's send a signal?",
+    intro: 'Got an idea, an opportunity, or just want to swap references? My frequency is open.',
+    name: 'Your name', namePh: 'What should I call you?',
+    email: 'Your email', emailPh: 'you@email.com',
+    message: 'Your message', messagePh: 'Tell me about your idea, project or opportunity...',
+    send: 'Send signal', sending: 'Sending...',
+    errors: {
+    name: 'Enter your name (at least 2 letters).',
+    email: 'Enter a valid email, like you@email.com.',
+    message: 'Write at least 10 characters.',
+  },
+  success: 'Signal received! Thanks for reaching out, I will reply soon.',
+  failure: "Couldn't send right now. Try again or use one of the contacts beside the form.",
+},
+  footer: { rights: 'Designed with curiosity and the golden ratio.' },
+  a11y: { toggleTheme: 'Toggle light/dark theme', openMenu: 'Open menu', language: 'Language' },
   },
 };
