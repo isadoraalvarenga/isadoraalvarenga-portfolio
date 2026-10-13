@@ -8,6 +8,7 @@ import { useLanguage } from './context/LanguageContext.jsx';
 import { projects } from './data/projects.js';
 import { experiences } from './data/experiences.js';
 import Contact from './components/Contact.jsx';
+import About from './components/About.jsx';
 
 const SECTION_IDS = SECTIONS.map((s) => s.id);
 
@@ -41,9 +42,7 @@ export default function App() {
           </div>
         </div>
 
-        <Section id="sobre" label={t.about.label} title={t.about.title}>
-          <p className="muted">{t.about.text}</p>
-        </Section>
+        <About />
 
         <Section id="projetos" label={t.projects.label} title={t.projects.title}>
           <ul className="placeholder-list">
