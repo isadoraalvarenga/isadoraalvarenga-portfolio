@@ -26,7 +26,7 @@ export default function Header({ activeId }) {
       <div className="container header-inner">
         <a href="#top" className="logo" aria-label="Isadora Alvarenga">
           <span className="logo-mark">φ</span>
-          Isadora <span>Alvarenga</span>
+          Isadora Alvarenga
         </a>
 
         <nav className="nav" aria-label="Principal">
