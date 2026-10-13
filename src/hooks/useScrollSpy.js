@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-// Devolve o id da seção que está visível, para destacar o item certo do menu.
 export function useScrollSpy(ids) {
   const [active, setActive] = useState(ids[0]);
 
@@ -11,13 +10,23 @@ export function useScrollSpy(ids) {
           if (entry.isIntersecting) setActive(entry.target.id);
         });
       },
-      { rootMargin: '-40% 0px -55% 0px' } // considera "ativa" a seção que cruza o meio da tela
+      { rootMargin: '-40% 0px -55% 0px' }
     );
     ids.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
-    return () => observer.disconnect();
+
+    const onScroll = () => {
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      if (atBottom) setActive(ids[ids.length - 1]);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', onScroll);
+    };
   }, [ids]);
 
   return active;

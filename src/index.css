@@ -123,3 +123,4 @@ a { color: inherit; }
 }
 .social a:hover { color: var(--accent); border-color: var(--accent); }
 
+#contato { min-height: calc(100svh - 72px); }
