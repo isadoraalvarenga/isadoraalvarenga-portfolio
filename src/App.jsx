@@ -1,122 +1,82 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { IconArrowRight, IconDownload } from '@tabler/icons-react';
+import Header from './components/Header.jsx';
+import { SECTIONS } from './data/sections.js';
+import Footer from './components/Footer.jsx';
+import Section from './components/Section.jsx';
+import { useScrollSpy } from './hooks/useScrollSpy.js';
+import { useLanguage } from './context/LanguageContext.jsx';
+import { projects } from './data/projects.js';
+import { experiences } from './data/experiences.js';
 
-function App() {
-  const [count, setCount] = useState(0)
+const SECTION_IDS = SECTIONS.map((s) => s.id);
+
+export default function App() {
+  const { lang, t } = useLanguage();
+  const activeId = useScrollSpy(SECTION_IDS);
+
+  const sortedProjects = [...projects].sort((a, b) => a.year - b.year);
 
   return (
     <>
-      <section id="center">
+      <Header activeId={activeId} />
+
+      <main id="top">
+        
         <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
+          <div className="container">
+            <h1>
+              Isadora Ferreira
+              <strong>Alvarenga.</strong>
+            </h1>
+            <p className="hero-role">{t.hero.role}</p>
+            <p className="hero-tagline">{t.hero.tagline}</p>
+            <div className="hero-actions">
+              <a className="btn btn-primary" href="#projetos">
+                {t.hero.seeProjects} <IconArrowRight size={18} />
               </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
+              <a className="btn" href="/curriculo-isadora.pdf" download>
+                {t.hero.downloadCv} <IconDownload size={18} />
               </a>
-            </li>
+            </div>
+          </div>
+        </div>
+
+        <Section id="sobre" label={t.about.label} title={t.about.title}>
+          <p className="muted">{t.about.text}</p>
+        </Section>
+
+        <Section id="projetos" label={t.projects.label} title={t.projects.title}>
+          <ul className="placeholder-list">
+            {sortedProjects.map((p) => (
+              <li key={p.id}>
+                <h3>{p.name} <span className="muted">({p.year})</span></h3>
+                <p className="muted">{p.description[lang]}</p>
+                <div className="tags">
+                  {p.technologies.map((tech) => <span className="tag" key={tech}>{tech}</span>)}
+                </div>
+              </li>
+            ))}
           </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        </Section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+        <Section id="experiencias" label={t.experiences.label} title={t.experiences.title}>
+          <ul className="placeholder-list">
+            {experiences.map((e) => (
+              <li key={e.id}>
+                <h3>{e.role[lang]}</h3>
+                <p className="muted">{e.organization} · {e.period}</p>
+                <p>{e.description[lang]}</p>
+              </li>
+            ))}
+          </ul>
+        </Section>
+
+        <Section id="contato" label={t.contact.label} title={t.contact.title}>
+          <p className="muted">Formulário e ícones coloco depois</p>
+        </Section>
+      </main>
+
+      <Footer />
     </>
-  )
+  );
 }
-
-export default App
