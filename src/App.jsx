@@ -25,8 +25,7 @@ export default function App() {
         <div className="hero">
           <div className="container">
             <h1>
-              Isadora Ferreira
-              <strong>Alvarenga.</strong>
+              <strong>Isadora Ferreira Alvarenga</strong>
             </h1>
             <p className="hero-role">{t.hero.role}</p>
             <p className="hero-tagline">{t.hero.tagline}</p>
