@@ -56,7 +56,7 @@ experiences: {
   success: 'Sinal recebido! Obrigada pelo contato, respondo em breve.',
   failure: 'Não foi possível enviar agora. Tente de novo ou use um dos contatos ao lado.',
 },
-  footer: { rights: 'Projetado com curiosidade e proporção áurea.' },
+  footer: { rights: 'Do código às estrelas.' },
     a11y: { toggleTheme: 'Alternar tema claro/escuro', openMenu: 'Abrir menu', language: 'Idioma' },
   },
   en: {
@@ -116,7 +116,7 @@ experiences: {
   success: 'Signal received! Thanks for reaching out, I will reply soon.',
   failure: "Couldn't send right now. Try again or use one of the contacts beside the form.",
 },
-  footer: { rights: 'Designed with curiosity and the golden ratio.' },
+  footer: { rights: 'From code to the stars.' },
   a11y: { toggleTheme: 'Toggle light/dark theme', openMenu: 'Open menu', language: 'Language' },
   },
 };
