@@ -32,6 +32,8 @@ export default function ReCaptcha({ lang, resetKey, onToken, onLoadError }) {
     return () => {
       cancelled = true;
     };
+    // Redesenha só quando o tema muda
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scheme]);
 
   useEffect(() => {

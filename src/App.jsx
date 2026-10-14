@@ -2,7 +2,6 @@ import { IconArrowRight, IconDownload } from '@tabler/icons-react';
 import Header from './components/Header.jsx';
 import { SECTIONS } from './data/sections.js';
 import Footer from './components/Footer.jsx';
-import Section from './components/Section.jsx';
 import { useScrollSpy } from './hooks/useScrollSpy.js';
 import { useLanguage } from './context/LanguageContext.jsx';
 import Contact from './components/Contact.jsx';
