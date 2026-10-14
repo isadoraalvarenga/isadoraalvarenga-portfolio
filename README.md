@@ -1,5 +1,3 @@
-# React + Vite
-
 # 🌌 Portfólio Isadora Alvarenga
 
  Portfólio profissional de **Isadora Ferreira Alvarenga**, estudante de Engenharia de Software, com identidade visual inspirada em **constelações** e na **proporção áurea (Fibonacci)**. Apresenta trajetória, habilidades, projetos e contato de forma moderna, responsiva e bilíngue (PT/EN), com tema escuro "Galáxia" e tema claro "Herbário".
@@ -9,9 +7,9 @@
 ## 🚧 Status do Projeto
 
 ![Versão](https://img.shields.io/badge/Versão-v0.1.0-blue?style=for-the-badge)
-![React](https://img.shields.io/badge/React-007ec6?style=for-the-badge&logo=react&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-007ec6?style=for-the-badge&logo=vite&logoColor=white)
-![Mantine](https://img.shields.io/badge/Mantine-007ec6?style=for-the-badge&logo=mantine&logoColor=white)
+![React](https://img.shields.io/badge/React-19.2.8-007ec6?style=for-the-badge&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8.3-007ec6?style=for-the-badge&logo=vite&logoColor=white)
+![Mantine](https://img.shields.io/badge/Mantine-9.7.2-007ec6?style=for-the-badge&logo=mantine&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-007ec6?style=for-the-badge&logo=vercel&logoColor=white)
 
 ---
@@ -35,7 +33,7 @@
 ---
 
 ## 🔗 Links Úteis
-* 🌐 **Site publicado:** https://isadoraalvarenga-portfolio.vercel.app
+* 🌐 **Site publicado:** https://isadoraalvarenga.vercel.app
 * 🎨 **Protótipo no Figma:** https://www.figma.com/make/zvmWb6jhZbwi3YeoZFqmrx/High-Fidelity-Portfolio-Prototype?t=wDEXBKmTG2YDGITu-20&fullscreen=1
 * 💻 **Repositório:** https://github.com/isadoraalvarenga/isadoraalvarenga-portfolio
 
@@ -45,7 +43,7 @@
 
 Este portfólio nasceu como o Laboratório 01 da disciplina de **Desenvolvimento e Integração de Aplicações Web** (Engenharia de Software, PUC Minas), mas foi pensado para continuar vivo: será usado em entrevistas e apresentações profissionais, crescendo junto comigo e minha carreira.
 
-**Conceito visual "Constelação Phi":** espaço e biologia compartilham a mesma matemática. As habilidades ficam dispostas em uma espiral áurea (a mesma de galáxias, girassóis e conchas), os projetos formam uma constelação em ordem cronológica e o formulário de contato é um "sinal" enviado.
+**Conceito visual "Constelação Phi":** espaço e biologia compartilham a mesma matemática. As habilidades ficam distribuídas em um globo 3D pela espiral de Fibonacci (a mesma lógica de galáxias, girassóis e conchas), os projetos formam uma constelação em ordem cronológica e o formulário de contato é um "sinal" enviado.
 
 **Dois temas:** *Galáxia* (escuro, principal) e *Herbário* (claro, inspirado em biologia e natureza). Novos temas personalizados poderão ser adicionados no futuro.
 
@@ -57,16 +55,17 @@ Este portfólio nasceu como o Laboratório 01 da disciplina de **Desenvolvimento
 - 🌐 **Bilíngue (PT/EN)** com alternância instantânea e preferência salva.
 - 🌗 **Tema claro/escuro** com alternância no cabeçalho.
 - 👩‍💻 **Sobre mim:** formação, área de atuação, interesses e objetivos profissionais.
+- 🪐 **Globo de habilidades:** ícones distribuídos em uma esfera pela espiral de Fibonacci, que gira sozinha, pode ser arrastada e abre um link ao clicar.
 - 🌠 **Projetos:** timeline dinâmica em constelação, do mais antigo ao mais recente, com tecnologias, link do GitHub e imagem/GIF.
-- 🛰️ **Experiências:** estágios, freelas, open source e eventos.
-- 📨 **Contato:** ícones clicáveis (e-mail, WhatsApp, LinkedIn, GitHub) e formulário com envio por e-mail via EmailJS.
+- 🛰️ **Experiências:** formação, programas, estágios, freelas, open source e eventos.
+- 📨 **Contato:** ícones clicáveis (e-mail, WhatsApp, LinkedIn, GitHub) e formulário com validação, proteção reCAPTCHA e envio por e-mail via EmailJS.
 - 📱 **Design responsivo** com menu lateral no mobile.
 
 ---
 
 ## 🎨 Protótipos (Figma)
 
-Wireframes de média fidelidade criados no Figma. 🔗 [Abrir no Figma](https://www.figma.com/make/zvmWb6jhZbwi3YeoZFqmrx/High-Fidelity-Portfolio-Prototype?t=wDEXBKmTG2YDGITu-20&fullscreen=1)
+Protótipo criado no Figma. 🔗 [Abrir no Figma](https://www.figma.com/make/zvmWb6jhZbwi3YeoZFqmrx/High-Fidelity-Portfolio-Prototype?t=wDEXBKmTG2YDGITu-20&fullscreen=1)
 
 ### Paleta e tipografia
 
@@ -76,6 +75,7 @@ Wireframes de média fidelidade criados no Figma. 🔗 [Abrir no Figma](https://
 | Herbário (claro) | `#F4F1E8` | `#FFFFFF` | `#2F6B4F` | `#A8C3A0` |
 
 **Fontes:** Space Grotesk (títulos), Inter (texto) e JetBrains Mono (detalhes).
+
 ---
 
 ## 🛠 Tecnologias Utilizadas
@@ -86,13 +86,15 @@ Wireframes de média fidelidade criados no Figma. 🔗 [Abrir no Figma](https://
 * **Linguagem:** JavaScript (ES6+)
 * **Build tool:** Vite ^8.3.0
 * **UI:** Mantine (`@mantine/core`, `@mantine/hooks`)
-* **Ícones:** Tabler Icons (`@tabler/icons-react`)
+* **Ícones:** Tabler Icons (`@tabler/icons-react`) na interface e React Icons (`react-icons`) nas tecnologias do globo
+* **Globo 3D:** feito sem biblioteca de 3D, com React, CSS e `<canvas>` 2D (espiral de Fibonacci, rotação e projeção em perspectiva)
 * **Estado global:** Context API (idioma) e `useMantineColorScheme` (tema)
 * **Estilização:** CSS com variáveis por tema + Mantine
 
 ### 📨 Integrações
 
 * **EmailJS** (`@emailjs/browser`): envio de e-mails direto do front-end
+* **Google reCAPTCHA v2:** proteção do formulário contra robôs
 
 ### ⚙️ Infraestrutura
 
@@ -102,14 +104,25 @@ Wireframes de média fidelidade criados no Figma. 🔗 [Abrir no Figma](https://
 
 ### 📦 Dependências
 
-  "dependencies": {
-    "@emailjs/browser": "^5.0.3",
-    "@mantine/core": "^9.7.2",
-    "@mantine/hooks": "^9.7.2",
-    "@tabler/icons-react": "^3.49.0",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
-  }
+```json
+"dependencies": {
+  "@emailjs/browser": "^5.0.3",
+  "@mantine/core": "^9.7.2",
+  "@mantine/hooks": "^9.7.2",
+  "@tabler/icons-react": "^3.49.0",
+  "react": "^19.2.8",
+  "react-dom": "^19.2.8",
+  "react-icons": "^5.7.0"
+}
+```
+
+| Pacote | Uso |
+| :--- | :--- |
+| `react`, `react-dom` | Interface |
+| `@mantine/core`, `@mantine/hooks` | Componentes, tema claro/escuro e hooks |
+| `@tabler/icons-react` | Ícones da interface |
+| `react-icons` | Ícones das tecnologias no globo de habilidades |
+| `@emailjs/browser` | Envio do formulário por e-mail |
 
 ---
 
@@ -118,7 +131,8 @@ Wireframes de média fidelidade criados no Figma. 🔗 [Abrir no Figma](https://
 Aplicação **SPA de página única** (React + Vite), sem back-end próprio: o envio de e-mails é feito pelo EmailJS e o site é estático.
 
 - **Navegação:** seções com âncoras (`#sobre`, `#projetos`...) e *scroll-spy* (`IntersectionObserver`) para destacar o item ativo do menu.
-- **Dados separados da interface:** projetos, experiências, links e traduções ficam em `src/data/`. Para atualizar o portfólio basta editar esses arquivos, sem mexer nos componentes. A timeline é gerada a partir deles.
+- **Dados separados da interface:** projetos, experiências, habilidades, links e traduções ficam em `src/data/`. Para atualizar o portfólio basta editar esses arquivos, sem mexer nos componentes. A timeline e o globo são gerados a partir deles.
+- **Globo de habilidades:** os pontos são distribuídos em uma esfera pela espiral de Fibonacci e girados a cada quadro com seno e cosseno. A projeção em perspectiva é feita com cálculo simples, sem biblioteca de 3D.
 - **Internacionalização:** `LanguageContext` expõe `lang` e `t` (textos do idioma atual).
 - **Temas:** o Mantine controla claro/escuro e o `index.css` define as variáveis de cor de cada tema.
 
@@ -166,13 +180,23 @@ Crie um arquivo **`.env.local`** na raiz do projeto (ele não é versionado). No
 
 | Variável | Descrição |
 | :--- | :--- |
+| `VITE_EMAILJS_SERVICE_ID` | ID do serviço de e-mail no EmailJS |
+| `VITE_EMAILJS_TEMPLATE_ID_FOR_ME` | Template do aviso que chega para mim |
+| `VITE_EMAILJS_TEMPLATE_ID_FOR_SENDER` | Template de confirmação enviado ao visitante |
+| `VITE_EMAILJS_PUBLIC_KEY` | Chave pública do EmailJS |
+| `VITE_RECAPTCHA_SITE_KEY` | Chave pública (site key) do reCAPTCHA v2 |
+
+Exemplo de `.env.local`:
+
+```
 VITE_EMAILJS_SERVICE_ID=seu_service_id
 VITE_EMAILJS_TEMPLATE_ID_FOR_ME=seu_template_id_for_me
 VITE_EMAILJS_TEMPLATE_ID_FOR_SENDER=seu_template_id_for_sender
 VITE_EMAILJS_PUBLIC_KEY=sua_public_key
 VITE_RECAPTCHA_SITE_KEY=sua_site_key
+```
 
-Cada envio do formulário gera dois e-mails: a **confirmação para o visitante** e a **notificação para mim**.
+Cada envio do formulário gera dois e-mails: a **confirmação para o visitante** e a **notificação para mim**. A *secret key* do reCAPTCHA fica apenas no EmailJS e nunca entra no código.
 
 ---
 
@@ -181,39 +205,40 @@ Cada envio do formulário gera dois e-mails: a **confirmação para o visitante*
 O site é publicado na **Vercel**, conectada ao repositório do GitHub (a cada push na `main`, um novo deploy é feito).
 
 1. Importe o repositório em [vercel.com](https://vercel.com) (framework detectado: Vite).
-2. Em **Settings → Environment Variables**, cadastre as quatro variáveis `VITE_EMAILJS_*`.
+2. Em **Settings → Environment Variables**, cadastre as cinco variáveis `VITE_*` da seção anterior.
 3. Faça o deploy. As variáveis `VITE_*` entram no momento do build, então, ao alterá-las, é preciso um novo deploy.
 
-🌐 **Link do site:** https://isadoraalvarenga.vercel.app/
+🌐 **Link do site:** https://isadoraalvarenga.vercel.app
 
 ---
 
 ## 📂 Estrutura de Pastas
+
+```
 .
-├── public/                  # 📂 Arquivos estáticos (imagens dos projetos, favicons, foto de perfil)
-│   └── projetos/            # 🖼️ Imagens/mídias relativas aos projetos
+├── public/                  # 📂 Arquivos estáticos (foto de perfil, favicon)
+│   └── projetos/            # 🖼️ Imagens e GIFs dos projetos
 ├── src/
 │   ├── assets/              # 🖼️ Imagens e SVGs importados via código
-│   ├── components/          # 🧱 Componentes reutilizáveis (Header, Footer, About, Projects, Contact...)
-│   ├── config/              # ⚙️ Configurações (EmailJS e ReCaptcha)
-│   ├── context/             # 🌐 LanguageContext (gerenciamento de idioma PT/EN)
-│   ├── data/                # 🗂️ Dados estáticos (experiências, projetos, habilidades, traduções...)
-│   ├── hooks/               # 🎣 Custom Hooks (ex: useScrollSpy)
-│   ├── lib/                 # 🛠️ Utilitários e integrações (ReCaptcha e envio de e-mails)
-│   ├── App.css              # 🎨 Estilos do componente principal
-│   ├── App.jsx              # 📄 Composição das seções da aplicação
-│   ├── index.css            # 🎨 Estilos globais e variáveis do tema
+│   ├── components/          # 🧱 Componentes (Header, Footer, About, Projects, Experiences, Contact...)
+│   │   └── SkillsGlobe/     # 🪐 Globo de habilidades (JSX + CSS)
+│   ├── config/              # ⚙️ Configurações (EmailJS e reCAPTCHA)
+│   ├── context/             # 🌐 LanguageContext (idioma PT/EN)
+│   ├── data/                # 🗂️ Conteúdo: experiências, projetos, habilidades, links, traduções
+│   ├── hooks/               # 🎣 Custom Hooks (useScrollSpy)
+│   ├── lib/                 # 🛠️ Integrações (reCAPTCHA e envio de e-mails)
+│   ├── App.jsx              # 📄 Composição das seções
+│   ├── index.css            # 🎨 Estilos globais e variáveis dos temas
 │   ├── main.jsx             # 🚪 Ponto de entrada da aplicação
-│   └── theme.js             # 🎨 Configuração do tema (Mantine)
+│   └── theme.js             # 🎨 Tema do Mantine
 ├── .env.example             # 🧩 Modelo das variáveis de ambiente
-├── .env.local               # 🔐 Variáveis de ambiente locais (não versionadas)
 ├── .gitignore               # 🙈 Arquivos/pastas ignorados pelo Git
 ├── eslint.config.js         # 🚨 Configurações do ESLint
 ├── index.html               # 📄 Documento HTML principal
-├── package-lock.json        # 🔒 Trava de versões das dependências
-├── package.json             # 📦 Dependências e scripts do projeto
-├── README.md                # 📖 Documentação do projeto
+├── package.json             # 📦 Dependências e scripts
 └── vite.config.js           # ⚡ Configuração do Vite
+```
+
 ---
 
 ## 🔗 Documentações utilizadas
@@ -222,13 +247,17 @@ O site é publicado na **Vercel**, conectada ao repositório do GitHub (a cada p
 * 📖 [Vite](https://vitejs.dev/guide/)
 * 📖 [Mantine](https://mantine.dev/)
 * 📖 [Tabler Icons](https://tabler.io/icons)
+* 📖 [React Icons](https://react-icons.github.io/react-icons/)
 * 📖 [EmailJS](https://www.emailjs.com/docs/)
+* 📖 [Google reCAPTCHA v2](https://developers.google.com/recaptcha/docs/display)
 * 📖 [Conventional Commits](https://www.conventionalcommits.org/pt-br/v1.0.0/)
 
 ---
 
 ## 👩‍💻 Autora
 
+| 👤 Nome | GitHub | LinkedIn | E-mail |
+| :--- | :---: | :---: | :---: |
 | Isadora Ferreira Alvarenga | [GitHub](https://github.com/isadoraalvarenga) | [LinkedIn](https://www.linkedin.com/in/isadoraalvarenga) | [E-mail](mailto:isadoraalvarengaf@gmail.com) |
 
 ---
@@ -236,11 +265,10 @@ O site é publicado na **Vercel**, conectada ao repositório do GitHub (a cada p
 ## 🙏 Agradecimentos
 
 * [**Engenharia de Software PUC Minas**](https://www.instagram.com/engsoftwarepucminas/): pelo apoio institucional e estrutura acadêmica.
-* [**Prof. Dr. João Paulo Aramuni**](https://github.com/joaopauloaramuni): pelos ensinamentos e pelo template de README.
+* [**Prof. Dr. João Paulo Aramuni**](https://github.com/joaopauloaramuni): pelos ensinamentos, pelo template de README e pelo projeto SkillsGlobe, que serviu de base para o globo de habilidades deste portfólio.
 
 ---
 
 ## 📄 Licença
 
 Este projeto é distribuído sob a **Licença MIT**.
-
