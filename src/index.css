@@ -232,3 +232,23 @@ a { color: inherit; }
 .captcha { display: grid; gap: 0.5rem; }
 .captcha-box { min-height: 78px; }
 .form-status.captcha { color: #f87171; }
+
+.hero .container { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: center; }
+.photo-wrap { position: relative; justify-self: center; width: min(340px, 100%); }
+.photo-frame {
+  aspect-ratio: 4 / 5; overflow: hidden; border-radius: 999px 999px 24px 24px;
+  border: 1px solid var(--accent); background: var(--surface);
+  box-shadow: 0 0 0 8px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo-missing { width: 100%; height: 100%; display: grid; place-items: center; color: var(--text-dim); }
+.photo-tag {
+  position: absolute; right: -0.5rem; bottom: 1.5rem; padding: 0.3rem 0.7rem;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--accent);
+  background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+}
+@media (max-width: 820px) {
+  .hero { padding-bottom: 3rem; }
+  .hero .container { grid-template-columns: 1fr; gap: 2.5rem; }
+  .photo-wrap { width: min(260px, 100%); }
+}

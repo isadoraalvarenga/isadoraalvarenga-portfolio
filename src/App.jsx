@@ -9,6 +9,7 @@ import Contact from './components/Contact.jsx';
 import About from './components/About.jsx';
 import Projects from './components/Projects.jsx';
 import Experiences from './components/Experiences.jsx';
+import ProfilePhoto from './components/ProfilePhoto.jsx';
 
 const SECTION_IDS = SECTIONS.map((s) => s.id);
 
@@ -25,6 +26,7 @@ export default function App() {
         
         <div className="hero">
           <div className="container">
+            <div className="hero-text">
             <h1>
               <strong>Isadora Ferreira Alvarenga</strong>
             </h1>
@@ -37,7 +39,9 @@ export default function App() {
               <a className="btn" href="/curriculo-isadora.pdf" download>
                 {t.hero.downloadCv} <IconDownload size={18} />
               </a>
+              </div>
             </div>
+            <ProfilePhoto />
           </div>
         </div>
 
