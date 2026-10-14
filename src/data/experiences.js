@@ -32,4 +32,37 @@ export const experiences = [
       en: 'Technical degree in IT with academic distinction and knowledge of robotics.',
     },
   },
+  {
+    id: 'webtech',
+    organization: 'Web Tech',
+    role: { pt: 'Membro da Web Tech', en: 'Member of Web Tech' },
+    period: '2026 - atual',
+    type: 'program',
+    description: {
+      pt: 'Projeto de extensão universitária da PUC Minas, focada em desenvolver soluções digitais e criar conexões entre filhos da PUC na área de tecnologia',
+      en: 'A PUC Minas university outreach project focused on developing digital solutions and fostering connections among the PUC community within the technology sector.',
+    },
+  },
+  { 
+    id: 'ej',
+    organization: 'Membro fundador',
+    role: { pt: 'Empresa Júnior', en: 'Junior enterprise' },
+    period: '2026 - atual',
+    type: 'program',
+    description: {
+      pt: 'Membra fundadora da Empresa Júnior de tecnologia da PUC Minas, desde início de 2026',
+      en: 'Founding member of the PUC Minas technology junior enterprise since the beginning of 2026.',
+    },
+  },
+  { 
+    id: 'feira',
+    organization: 'Líder e gestora do projeto de feira de ciências',
+    role: { pt: 'Feira de ciêcias premiada', en: 'Award-winning science fair' },
+    period: '2025',
+    type: 'program',
+    description: {
+      pt: 'Feira de ciêcias premiada em primeiro lugar do projeto da maior escola estadual da minha cidade. Fiz, juntamente ao meu grupo, no qual geri e coordenei, uma réga para plantas automática, utilizando robótica (arduino e outros componentes de hardware, como diversos sensores) e programação (HTML, JavaScript e PHP).',
+      en: 'My group—which I managed and coordinated—won first place at the science fair for a project at the largest state school in my city. We created an automated plant watering system using robotics (Arduino and hardware components such as various sensors) and programming (HTML, JavaScript, and PHP).',
+    },
+  },
 ];
