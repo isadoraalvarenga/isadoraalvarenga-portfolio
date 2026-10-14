@@ -9,7 +9,7 @@ export const translations = {
     },
   about: {
     label: 'Sobre mim',
-    title: 'Sobre mim.',
+    title: 'Software, espaço e vida.',
     intro: 'Sou estudante de Engenharia de Software e técnica em Informática, com destaque acadêmico na formação técnica e conhecimentos em robótica. Gosto de unir tecnologia aos temas que me encantam, como astronomia e biologia, e de transformar curiosidade em projetos reais.',
     educationTitle: 'Formação',
     education: 'Engenharia de Software (em andamento) na PUC Minas. Técnica em Informática, com destaque acadêmico e conhecimentos em robótica.',
@@ -69,7 +69,7 @@ experiences: {
     },
  about: {
   label: 'About me',
-  title: 'About Me.',
+  title: 'Software, space and life.',
   intro: "I'm a Software Engineering student with a technical degree in IT, graduating with academic distinction and with knowledge of robotics. I like to combine technology with the subjects that fascinate me, such as astronomy and biology, and to turn curiosity into real projects.",
   educationTitle: 'Education',
   education: 'Software Engineering (in progress) at PUC Minas. Technical degree in IT, with academic distinction and knowledge of robotics.',
