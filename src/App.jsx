@@ -5,18 +5,17 @@ import Footer from './components/Footer.jsx';
 import Section from './components/Section.jsx';
 import { useScrollSpy } from './hooks/useScrollSpy.js';
 import { useLanguage } from './context/LanguageContext.jsx';
-import { projects } from './data/projects.js';
-import { experiences } from './data/experiences.js';
 import Contact from './components/Contact.jsx';
 import About from './components/About.jsx';
+import Projects from './components/Projects.jsx';
+import Experiences from './components/Experiences.jsx';
 
 const SECTION_IDS = SECTIONS.map((s) => s.id);
 
 export default function App() {
-  const { lang, t } = useLanguage();
+  const { t } = useLanguage();
   const activeId = useScrollSpy(SECTION_IDS);
 
-  const sortedProjects = [...projects].sort((a, b) => a.year - b.year);
 
   return (
     <>
@@ -44,33 +43,12 @@ export default function App() {
 
         <About />
 
-        <Section id="projetos" label={t.projects.label} title={t.projects.title}>
-          <ul className="placeholder-list">
-            {sortedProjects.map((p) => (
-              <li key={p.id}>
-                <h3>{p.name} <span className="muted">({p.year})</span></h3>
-                <p className="muted">{p.description[lang]}</p>
-                <div className="tags">
-                  {p.technologies.map((tech) => <span className="tag" key={tech}>{tech}</span>)}
-                </div>
-              </li>
-            ))}
-          </ul>
-        </Section>
+        <Projects />
 
-        <Section id="experiencias" label={t.experiences.label} title={t.experiences.title}>
-          <ul className="placeholder-list">
-            {experiences.map((e) => (
-              <li key={e.id}>
-                <h3>{e.role[lang]}</h3>
-                <p className="muted">{e.organization} · {e.period}</p>
-                <p>{e.description[lang]}</p>
-              </li>
-            ))}
-          </ul>
-        </Section>
+        <Experiences />
 
         <Contact />
+
       </main>
 
       <Footer />
