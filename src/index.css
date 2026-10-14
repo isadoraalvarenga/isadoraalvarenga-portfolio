@@ -228,3 +228,7 @@ a { color: inherit; }
   .star-label { justify-items: start; }
   .project-card, .exp-grid { grid-template-columns: 1fr; }
 }
+
+.captcha { display: grid; gap: 0.5rem; }
+.captcha-box { min-height: 78px; }
+.form-status.captcha { color: #f87171; }

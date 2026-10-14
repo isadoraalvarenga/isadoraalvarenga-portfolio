@@ -4,6 +4,8 @@ import Section from './Section.jsx';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { contactLinks } from '../data/links.js';
 import { sendContactEmail } from '../lib/sendContactEmail.js';
+import ReCaptcha from './ReCaptcha.jsx';
+import RECAPTCHA_CONFIG from '../config/recaptchaConfig.js';
 
 const ICONS = { email: IconMail, whatsapp: IconBrandWhatsapp, linkedin: IconBrandLinkedin, github: IconBrandGithub };
 const LIMITS = { name: 80, email: 120, message: 1000 };
@@ -24,6 +26,10 @@ export default function Contact() {
     const [values, setValues] = useState(EMPTY);
     const [touched, setTouched] = useState({});
     const [status, setStatus] = useState('idle');
+    const [captchaToken, setCaptchaToken] = useState(null);
+    const [captchaFailed, setCaptchaFailed] = useState(false);
+    const [captchaResetKey, setCaptchaResetKey] = useState(0);
+    const captchaEnabled = Boolean(RECAPTCHA_CONFIG.SITE_KEY);
 
     const errors = validate(values, c.errors);
     const showError = (field) => touched[field] && errors[field];
@@ -39,6 +45,12 @@ export default function Contact() {
     if (status === 'sending') return;
     setTouched({ name: true, email: true, message: true });
     if (Object.keys(errors).length > 0) return;
+    if (captchaEnabled && !captchaToken) {
+    setStatus('captcha');
+    return;
+    
+}
+
 
     if (values.website) {
         setStatus('success');
@@ -53,6 +65,7 @@ export default function Contact() {
         email: values.email.trim(),
         message: values.message.trim(),
         lang,
+        captchaToken,
         });
         setStatus('success');
         setValues(EMPTY);
@@ -60,6 +73,8 @@ export default function Contact() {
     } catch (err) {
         console.error('Falha ao enviar e-mail:', err);
         setStatus('error');
+    } finally {setCaptchaToken(null);
+    setCaptchaResetKey((k) => k + 1);
     }
     };
 
@@ -125,6 +140,18 @@ export default function Contact() {
             aria-hidden="true" value={values.website} onChange={handleChange}
     />
 
+    {captchaEnabled && (
+    <div className="captcha">
+        <ReCaptcha
+        lang={lang}
+        resetKey={captchaResetKey}
+        onToken={setCaptchaToken}
+        onLoadError={() => setCaptchaFailed(true)}
+        />
+        {captchaFailed && <p className="field-error">{c.errors.captchaLoad}</p>}
+    </div>
+    )}
+
     <button type="submit" className="btn btn-primary btn-block" disabled={status === 'sending'}>
             {status === 'sending' ? c.sending : c.send} <IconSend size={18} />
     </button>
@@ -132,6 +159,7 @@ export default function Contact() {
     <p role="status" aria-live="polite" className={`form-status ${status}`}>
             {status === 'success' && c.success}
             {status === 'error' && c.failure}
+            {status === 'captcha' && c.errors.captcha}
             </p>
         </form>
     </div>
