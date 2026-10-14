@@ -13,7 +13,7 @@ import ProfilePhoto from './components/ProfilePhoto.jsx';
 const SECTION_IDS = SECTIONS.map((s) => s.id);
 
 export default function App() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
   const activeId = useScrollSpy(SECTION_IDS);
 
 
@@ -35,7 +35,11 @@ export default function App() {
               <a className="btn btn-primary" href="#projetos">
                 {t.hero.seeProjects} <IconArrowRight size={18} />
               </a>
-              <a className="btn" href="/curriculo-isadora.pdf" download>
+              <a
+                className="btn"
+                href={`/curriculo-isadora-${lang}.pdf`}
+                download={`Curriculo-Isadora-Alvarenga-${lang.toUpperCase()}.pdf`}
+              >
                 {t.hero.downloadCv} <IconDownload size={18} />
               </a>
               </div>
