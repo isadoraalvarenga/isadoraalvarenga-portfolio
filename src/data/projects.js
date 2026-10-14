@@ -9,7 +9,7 @@ export const projects = [
     },
     technologies: ['HTML', 'CSS', 'JavaScript', 'Banco de dados'],
     github: 'https://github.com/isadoraalvarenga/DOSE',
-    image: null,
+    image: '/projetos/dose.webp',
   },
   {
     id: 'antares',
@@ -21,7 +21,7 @@ export const projects = [
     },
     technologies: ['Python'],
     github: 'https://github.com/isadoraalvarenga/Antares',
-    image: null,
+    image: '/projetos/antares.png',
   },
   {
     id: 'next-step-global',
@@ -33,6 +33,6 @@ export const projects = [
     },
     technologies: ['HTML', 'CSS', 'JavaScript'],
     github: null, 
-    image: null,
+    image: '/projetos/nextstepglobal.webp',
   },
 ];
