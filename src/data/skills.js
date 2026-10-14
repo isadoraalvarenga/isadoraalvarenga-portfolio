@@ -1,1 +1,1 @@
-export const skills = ['Python', 'React', 'java', 'JavaScript', 'HTML', 'CSS', 'Git', 'Figma'];
+export const skills = ['HTML', 'CSS', 'JavaScript', 'Python', 'React', 'Banco de dados','Arduino', 'php', 'Git', 'Figma'];

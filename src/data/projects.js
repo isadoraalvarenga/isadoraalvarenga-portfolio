@@ -1,22 +1,38 @@
-// EXEMPLO - substituir pelos seus projetos reais.
-// A timeline é gerada a partir deste array (ordenada do mais antigo ao mais recente).
 export const projects = [
   {
-    id: 'exemplo-1',
-    name: 'Projeto de exemplo 1',
-    year: 2024,
-    description: { pt: 'Descrição curta do projeto.', en: 'Short project description.' },
-    technologies: ['React', 'Vite'],
-    github: 'https://github.com/SEU-USUARIO/projeto-1',
-    image: null, // ex: '/projetos/projeto-1.gif' (arquivo dentro de public/projetos/)
+    id: 'dose',
+    name: 'D.O.S.E',
+    year: 2023,
+    description: {
+      pt: 'Gerenciador de estoque pensado para pequenas farmácias, com os dados organizados em banco de dados.',
+      en: 'Inventory manager designed for small pharmacies, with data organized in a database.',
+    },
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Banco de dados'],
+    github: 'https://github.com/isadoraalvarenga/DOSE',
+    image: null,
   },
   {
-    id: 'exemplo-2',
-    name: 'Projeto de exemplo 2',
-    year: 2025,
-    description: { pt: 'Descrição curta do projeto.', en: 'Short project description.' },
+    id: 'antares',
+    name: 'Antares',
+    year: 2024,
+    description: {
+      pt: 'Jogo inspirado em Space Invaders e Star Wars para aprender conteúdos de TI de forma divertida.',
+      en: 'A game inspired by Space Invaders and Star Wars for learning IT subjects in a fun way.',
+    },
     technologies: ['Python'],
-    github: 'https://github.com/SEU-USUARIO/projeto-2',
+    github: 'https://github.com/isadoraalvarenga/Antares',
+    image: null,
+  },
+  {
+    id: 'next-step-global',
+    name: 'Next Step Global',
+    year: 2025,
+    description: {
+      pt: 'Site que ajuda quem quer fazer intercâmbio a encontrar a melhor opção pelo mundo e a se organizar.',
+      en: 'A website that helps people interested in studying abroad find the best option around the world and get organized.',
+    },
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    github: null, 
     image: null,
   },
 ];
